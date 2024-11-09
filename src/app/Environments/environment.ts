@@ -1,5 +1,5 @@
 
 export const environment = {
 	production: false,
-	apiUrl: 'http://localhost:8412/Foyer',
+	apiUrl: 'http://massoud.portainer.tn:8412/Foyer',
 };
