@@ -73,14 +73,14 @@
                                   <tr>
                                       <th>#</th>
                                       <th>Name</th>
-                                      <th>Description</th>
+                                      <th>Numero Chambre</th>
                                   </tr>
                               </thead>
                               <tbody>
                                   <tr *ngFor="let bloc of blocs; let i = index">
                                       <th>{{ i + 1 }}</th>
-                                      <td>{{ bloc.name }}</td>
-                                      <td>{{ bloc.description }}</td>
+                                      <td>{{ bloc.nomBloc}}</td>
+                                      <td>{{ bloc.capaciteBloc}}</td>
                                   </tr>
                               </tbody>
                           </table>
@@ -102,8 +102,8 @@
                               <tbody>
                                   <tr *ngFor="let chambre of chambres; let i = index">
                                       <th>{{ i + 1 }}</th>
-                                      <td>{{ chambre.number }}</td>
-                                      <td>{{ chambre.capacity }}</td>
+                                      <td>{{ chambre.numeroChambre }}</td>
+                                      <td>{{ chambre.typeC }}</td>
                                   </tr>
                               </tbody>
                           </table>
@@ -120,15 +120,15 @@
                                       <th>#</th>
                                       <th>First Name</th>
                                       <th>Last Name</th>
-                                      <th>Age</th>
+                                      <th>cin</th>
                                   </tr>
                               </thead>
                               <tbody>
                                   <tr *ngFor="let etudiant of etudiants; let i = index">
                                       <th>{{ i + 1 }}</th>
-                                      <td>{{ etudiant.firstName }}</td>
-                                      <td>{{ etudiant.lastName }}</td>
-                                      <td>{{ etudiant.age }}</td>
+                                      <td>{{ etudiant.nomEt }}</td>
+                                      <td>{{ etudiant.prenomEt }}</td>
+                                      <td>{{ etudiant.cin }}</td>
                                   </tr>
                               </tbody>
                           </table>
@@ -150,8 +150,8 @@
                               <tbody>
                                   <tr *ngFor="let foyer of foyers; let i = index">
                                       <th>{{ i + 1 }}</th>
-                                      <td>{{ foyer.address }}</td>
-                                      <td>{{ foyer.manager }}</td>
+                                      <td>{{ foyer.nomFoyer }}</td>
+                                      <td>{{ foyer.capaciteFoyer }}</td>
                                   </tr>
                               </tbody>
                           </table>
@@ -166,17 +166,15 @@
                               <thead>
                                   <tr>
                                       <th>#</th>
-                                      <th>Room Number</th>
-                                      <th>Student Name</th>
-                                      <th>Date</th>
+                                      <th>annee Universitaire</th>
+                                      <th>est Valide</th>
                                   </tr>
                               </thead>
                               <tbody>
                                   <tr *ngFor="let reservation of reservations; let i = index">
                                       <th>{{ i + 1 }}</th>
-                                      <td>{{ reservation.roomNumber }}</td>
-                                      <td>{{ reservation.studentName }}</td>
-                                      <td>{{ reservation.date | date }}</td>
+                                      <td>{{ reservation.anneeUniversitaire }}</td>
+                                      <td>{{ reservation.estValide }}</td>
                                   </tr>
                               </tbody>
                           </table>
@@ -198,8 +196,8 @@
                               <tbody>
                                   <tr *ngFor="let universite of universites; let i = index">
                                       <th>{{ i + 1 }}</th>
-                                      <td>{{ universite.name }}</td>
-                                      <td>{{ universite.location }}</td>
+                                      <td>{{ universite.nomUniversite}}</td>
+                                      <td>{{ universite.adresse}}</td>
                                   </tr>
                               </tbody>
                           </table>

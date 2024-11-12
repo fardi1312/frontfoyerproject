@@ -20,52 +20,103 @@ export class AppComponent implements OnInit {
 
   ngOnInit(): void {
     this.fetchBlocs();
+    setTimeout(() => {
+      this.fetchChambres();
+    }, 1000);
     this.fetchChambres();
+    setTimeout(() => {
+      this.fetchChambres();
+    }, 1000);
     this.fetchEtudiants();
+    setTimeout(() => {
+      this.fetchChambres();
+    }, 1000);
     this.fetchFoyers();
+    setTimeout(() => {
+      this.fetchChambres();
+    }, 1000);
     this.fetchReservations();
+    setTimeout(() => {
+      this.fetchChambres();
+    }, 1000);
     this.fetchUniversites();
   }
 
-  fetchBlocs() {
+  fetchBlocs(): void {
     this.userService.getAllBlocs().subscribe(
-      data => this.blocs = data,
-      error => console.error('Error fetching blocs:', error)
+      data => {
+        console.log('Blocs:', data); // Optional: Log the data for debugging
+        this.blocs = data;
+      },
+      error => {
+        console.error('Error fetching blocs:', error);
+        // Optional: Show user-friendly message or handle in UI
+      }
     );
   }
 
-  fetchChambres() {
+  fetchChambres(): void {
     this.userService.getAllChambres().subscribe(
-      data => this.chambres = data,
-      error => console.error('Error fetching chambres:', error)
+      data => {
+        console.log('Chambres:', data); // Optional: Log the data for debugging
+        this.chambres = data;
+      },
+      error => {
+        console.error('Error fetching chambres:', error);
+        // Optional: Show user-friendly message or handle in UI
+      }
     );
   }
 
-  fetchEtudiants() {
+  fetchEtudiants(): void {
     this.userService.getAllEtudiants().subscribe(
-      data => this.etudiants = data,
-      error => console.error('Error fetching etudiants:', error)
+      data => {
+        console.log('Etudiants:', data); // Optional: Log the data for debugging
+        this.etudiants = data;
+      },
+      error => {
+        console.error('Error fetching etudiants:', error);
+        // Optional: Show user-friendly message or handle in UI
+      }
     );
   }
 
-  fetchFoyers() {
+  fetchFoyers(): void {
     this.userService.getAllFoyers().subscribe(
-      data => this.foyers = data,
-      error => console.error('Error fetching foyers:', error)
+      data => {
+        console.log('Foyers:', data); // Optional: Log the data for debugging
+        this.foyers = data;
+      },
+      error => {
+        console.error('Error fetching foyers:', error);
+        // Optional: Show user-friendly message or handle in UI
+      }
     );
   }
 
-  fetchReservations() {
+  fetchReservations(): void {
     this.userService.getAllReservations().subscribe(
-      data => this.reservations = data,
-      error => console.error('Error fetching reservations:', error)
+      data => {
+        console.log('Reservations:', data); // Optional: Log the data for debugging
+        this.reservations = data;
+      },
+      error => {
+        console.error('Error fetching reservations:', error);
+        // Optional: Show user-friendly message or handle in UI
+      }
     );
   }
 
-  fetchUniversites() {
+  fetchUniversites(): void {
     this.userService.getAllUniversites().subscribe(
-      data => this.universites = data,
-      error => console.error('Error fetching universites:', error)
+      data => {
+        console.log('Universites:', data); // Optional: Log the data for debugging
+        this.universites = data;
+      },
+      error => {
+        console.error('Error fetching universites:', error);
+        // Optional: Show user-friendly message or handle in UI
+      }
     );
   }
 }
